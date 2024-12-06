@@ -1,0 +1,351 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  'Verdana', 'Uniform rounded', 'Lato', sans-serif;
+    background-color: #f0f0f3;
+    color: #1d1b1b;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 1em 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+header .logo img {
+    max-width: 35px; /* Adjust this size as needed */
+    height: auto;
+    display: block;
+}
+
+/* Navigation Styling */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Header Background Area */
+.headerbg {
+    background: url('gramott_header.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Get Started Button */
+.btn-get-started {
+    background: #4CAF50;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn-get-started:hover {
+    background: #45a049;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('../assets/img/gramott_header.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    color: #fff;
+    overflow: hidden;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    text-align: left; /* Justify text to the left */
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    animation: fadeInUp 1s ease;
+}
+
+.btn-find-plan {
+    background: #4CAF50;
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeInUp 1.2s ease;
+}
+
+.btn-find-plan:hover {
+    background: #45a049;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Programs section */
+.programs, .meal-plans, .recipes, .calculator {
+    padding: 4em 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    border-radius: 10px;
+}
+
+.programs h2, .meal-plans h2, .recipes h2, .calculator h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.program-list, .meal-plan-list, .recipe-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.program-item, .meal-plan-item, .recipe-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.program-item img, .meal-plan-item img, .recipe-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 0.5em 0;
+}
+
+/* Calculator section */
+.calculator form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.calculator .form-row {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.calculator input {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1 1 200px;
+}
+
+.calculator button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+    flex: 1 1 200px;
+}
+
+.calculator button:hover {
+    background: #45a049;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2em 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer .footer-logo img {
+    max-width: 30px;
+}
+
+footer .newsletter {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+footer .newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+footer .newsletter input {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+footer .newsletter button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+}
+
+footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+footer .footer-links div {
+    flex: 1 1 20%;
+}
+
+footer .footer-links ul {
+    list-style: none;
+}
+
+footer .footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .social-media {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #ffffff; /* Adjust color as needed */
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+footer.social-media a:hover {
+    color: #007BFF; /* Adjust hover color as needed */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .program-item, .meal-plan-item, .recipe-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    footer .footer-links {
+        flex-direction: column;
+    }
+
+    footer .footer-links div {
+        flex: 1 1 100%;
+    }
+}
